@@ -7,6 +7,8 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["CustomersMVC/CustomersMVC.csproj", "CustomersMVC/"]
+COPY ["CustomersDataModels/CustomersDataModels.csproj CustomersDataModels/"]
+COPY ["RequestCorrelation/RequestCorrelation.csproj RequestCorrelation/"]"
 RUN dotnet restore "CustomersMVC/CustomersMVC.csproj"
 COPY . .
 WORKDIR "/src/CustomersMVC"
