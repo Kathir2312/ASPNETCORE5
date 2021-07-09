@@ -54,7 +54,7 @@ spec:
   selector:
     matchLabels:
       app: cm-aspnetcoredemo
-      component: cm-customersmvc
+      component: cm-customersmvc 
   replicas: 1
   template:
     metadata:
