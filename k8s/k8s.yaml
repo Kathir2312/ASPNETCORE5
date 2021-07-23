@@ -96,11 +96,12 @@ spec:
   ports:
   - port: 5000
     targetPort: 80
+    nodePort: 34999
   # The selector indicates which pods this service exposes
   selector:
     app: cm-aspnetcoredemo
     component: cm-customersapi
-
+  type: NodePort
 ---
 
 apiVersion: v1
@@ -123,4 +124,3 @@ spec:
   # balanced supplied by the Kubernetes host environment (Azure Container
   # Service, for example).
   type: LoadBalancer
-
